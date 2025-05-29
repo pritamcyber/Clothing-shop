@@ -28,7 +28,7 @@ export const ProductsProvider = ({ children }) => {
   const [products, setProducts] = useState({});
   
   const value = { products };
-    useEffect(async ()=>{
+    useEffect(async   ()=>{
           const getcategoriesMap =  async ()=>{
             const categoriesMap = await getCategoriesAndDocuments('hats') 
             // console.log(categoriesMap)

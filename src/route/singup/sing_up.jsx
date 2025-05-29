@@ -208,10 +208,10 @@ export const SingUp = () => {
           name='confirmPassword'
           value={confirmPassword}
         />
-        <Button type='submit'>Sign Up</Button>
+        <Button buttonType='base' type='submit'>Sign Up</Button>
       </form>
 
-      {/* <Button type='button' buttonType='google' onClick={async ()=> await signInWithGooglePopup() }> signInWithGooglePopup</Button> */}
+      <Button type='button' buttonType='google-sign-in' onClick={async ()=> await signInWithGooglePopup() }> signIn With Google </Button>
     </div>
   );
 };

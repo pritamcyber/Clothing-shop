@@ -7,7 +7,7 @@ import { singOutHandlerOption } from "../../utils/firebase/fireconfig";
 import CartIcon from "../../components/CartIcon/CartIcon";
 import CardDropDown from "../../components/CartDropdown/CartDropdown";
 import { DropDownContext } from "../../components/context/DropDown-context";
-
+import {NavigationDiv,Logo_div,Link_container,Links} from "./navigation-styled.jsx";
 const Navigation = () =>{
     const {currentUser,setcurrentUser} = useContext(user_info_context)
     const singOutHandler =async ()=>{ await singOutHandlerOption()
@@ -21,40 +21,40 @@ const Navigation = () =>{
         
         <Fragment>
         
-            <div className="Navigation  flex m-[10px] justify-between">
+            <NavigationDiv>
 
            
 
-            <div className=" logo "> 
+            <Logo_div > 
                 
                 <Link className="logo-link" to='/'> <Logo/> </Link> 
 
-            </div>
+            </Logo_div>
 
-            <div className=" links-container flex  gap-[20px]  ">
+            <Link_container>
                 {/* <Link className=" nav-link" to='/home'>
                     Shop
                 </Link> */}
-                <Link className=" nav-link" to='/singin'>
+                <Links className=" nav-link" to='/singin'>
                     Login
-                </Link>
-                <Link className=" nav-link" to='/shop'>
+                </Links>
+                <Links className=" nav-link" to='/shop'>
                     Shop
-                </Link>
-                {currentUser ? (<span className="nav-link" onClick={singOutHandler}>SingOut</span>  ):(<Link className=" nav-link" to='/auth'>
+                </Links>
+                {currentUser ? (<Links as="span" className="nav-link" onClick={singOutHandler}>SingOut</Links>  ):(<Links className=" nav-link" to='/auth'>
                     Sing in 
-                </Link>)}
-                {currentUser ? ( <Link className=" nav-link" to='/checkout'>Checkout</Link> ):(<></>)}
+                </Links>)}
+                {currentUser ? ( <Links className=" nav-link" to='/checkout'>Checkout</Links> ):(<></>)}
                 <CartIcon/>
                 
-            </div>
+            </Link_container>
             
             {Droped && (<CardDropDown/>)}
 
                     
             
 
-            </div>
+            </NavigationDiv>
 
             <Outlet/>
         </Fragment>

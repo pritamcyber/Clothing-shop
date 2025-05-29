@@ -179,7 +179,7 @@ export  const SingIN = () => {
         />
         <div className='buttons-container'>
           <Button type='submit' onClick={handleSubmit}>Sign In</Button>
-          <Button type='button' buttonType='google' onClick={signInWithGoogle}>
+          <Button type='button' buttonType='google-sign-in' onClick={signInWithGoogle}>
             Google sign in
           </Button>
         </div>
