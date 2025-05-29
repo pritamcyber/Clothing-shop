@@ -1,0 +1,106 @@
+String code() {  
+    String c = "";  
+        
+               c +=     "<!DOCTYPE html>";
+               c +=       "<html lang=\"en\">";
+                c +=        "<head>";
+                    c +=           "<meta charset=\"UTF-8\">";
+                    c +=          "<meta name=\"viewport\" content=\"width=device-width, initial-scale=1.0\">";
+                    c +=         "<title>Submit Form</title>";
+                    c +=        " <style>";
+           c +=            " body {";
+           c +=               " font-family: Arial, sans-serif;";
+           c +=               " background-color: #f4f4f9;";
+           c +=               " display: flex;";
+           c +=                "justify-content: center;";
+           c +=               " align-items: center;";
+           c +=                "height: 100vh;";
+           c +=              " margin: 0;";
+                           c +=          " }";
+
+                           c +=          " .form-container {";
+                           c +=              " background-color: white;";
+                           c +=             " padding: 30px;";
+                           c +=             "box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);";
+                           c +=            " border-radius: 10px;";
+                           c +=            " width: 300px;";
+                           c +=             "text-align: center;";
+                           c +=      "  }";
+
+                           c +=     "    h2 {";
+                           c +=     "    margin-bottom: 20px;";
+                           c +=      "color: #333;";
+                            c +=    " }";
+
+                            c +=    " .form-input {";
+                            c +=    "   width: 100%;";
+                            c +=     "  padding: 10px;";
+                            c +=     " margin: 10px 0;";
+                            c +=    "  border: 1px solid #ccc;";
+                            c +=    "  border-radius: 5px;";
+                            c +=    "  font-size: 16px;";
+                            c += "   }";
+
+                            c += "   .submit-btn {";
+                            c += "        width: 100%;";
+                            c +=  "   padding: 12px;";
+                            c +=   "  background-color: #5cb85c;";
+                            c +=   "  color: white;";
+                            c +=  "   border: none;";
+                            c +=   "  border-radius: 5px;";
+                            c +=    " font-size: 16px;";
+                            c +=   "  cursor: pointer;";
+                            c +=    " transition: background-color 0.3s ease;";
+                            c +=    "   }";
+
+                            c +=    "  .submit-btn:hover {";
+                            c +=     " background-color: #4cae4c;";
+                            c +=  "   }";
+
+                            c +=  " .message {";
+                            c +=  "    margin-top: 20px;";
+                            c +=   " color: #5cb85c;";
+                            c +=  " font-weight: bold;";
+                            c += "   }";
+                            c += "   </style>";
+                            c += "  </head>";
+                            c += "   <body>";
+
+                                c += "<div class=\"form-container\">";
+                                    c +=  " <h2>Submit Your Data</h2>";
+                                    c +=   " <form id=\"submitForm\" action=\"/submit\" method=\"POST\">";
+                                        c +=  "<input type=\"text\" id=\"userInput\" name=\"userInput\" class=\"form-input\" placeholder=\"Enter text here\" required>";
+                                        c +=  "      <button type=\"submit\" class=\"submit-btn\">Submit</button>";
+                                        c +=  "</form>";
+                                        c +=   "<div id=\"message\" class=\"message\"></div>";
+                                        c += "</div>";
+
+                                        c += "<script>";
+                                            c += " document.getElementById('submitForm').addEventListener('submit', function(event) {";
+                                            c +=    "event.preventDefault();  // Prevent form from submitting the traditional way";
+                                            c +=    " var inputVal = document.getElementById('userInput').value;";
+
+                                            c +=  "if (inputVal.trim() === \"\") {";
+                                            c +=   " document.getElementById('message').innerText = \"Please enter some text!\";";
+                                            c +=  " } else {";
+                                            c +=   " document.getElementById('message').innerText = \"Form submitted successfully!\";";
+                                            c +=  "  // Simulate form submission (since it's a demo)";
+                                            c +=    "setTimeout(function() {";
+                                            c +=     "   document.getElementById('message').innerText = \"\";";
+                                            c +=      "  document.getElementById('submitForm').reset();";
+                                            c +=   " }, 2000);";
+                                            c +=  "  }";
+                                            c +=  "  });";
+                                            c +=  " </script>";
+
+                                            c +=  " </body>";
+                                            c +=  "</html>";
+
+        return c;
+    
+    }
+
+
+
+
+    

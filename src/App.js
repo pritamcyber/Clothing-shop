@@ -1,43 +1,57 @@
+import { Routes, Route } from "react-router-dom";
+import Home from "./route/home/home.component";
+
+import Shop from "./route/shop/shop.component";
+
+import Navigation from "./route/navigation/navigation.component";
+
+import Singin from "./route/singin/singin.component";
+import { Authentication } from "./route/authenticatoin/auth";
+import { SingIN } from "./route/singin/singin_2";
+import { Checkout } from "./route/checkout/checkout-component";
+
 const App = () => {
-  return (
-    <div className='categories-container'>
-      <div className='category-container'>
-        {/* <img /> */}
-        <div className='category-body-container'>
-          <h2>Hats</h2>
-          <p>Shop Now</p>
-        </div>
-      </div>
-      <div className='category-container'>
-        {/* <img /> */}
-        <div className='category-body-container'>
-          <h2>Jackets</h2>
-          <p>Shop Now</p>
-        </div>
-      </div>
-      <div className='category-container'>
-        {/* <img /> */}
-        <div className='category-body-container'>
-          <h2>Sneakers</h2>
-          <p>Shop Now</p>
-        </div>
-      </div>
-      <div className='category-container'>
-        {/* <img /> */}
-        <div className='category-body-container'>
-          <h2>Womens</h2>
-          <p>Shop Now</p>
-        </div>
-      </div>
-      <div className='category-container'>
-        {/* <img /> */}
-        <div className='category-body-container'>
-          <h2>Mens</h2>
-          <p>Shop Now</p>
-        </div>
-      </div>
-    </div>
-  );
+    return (
+
+
+        <
+        Routes >
+
+        <
+        Route path = ""
+        element = { < Navigation / > } >
+        <
+        Route index element = { < Home / > }
+        />  <
+        Route path = "firebase"
+        element = { < firebase / > } > < /Route>
+
+        <
+        Route path = "shop/*"
+        element = { < Shop / > }
+        />  <
+        Route path = "checkout"
+        element = { < Checkout / > }
+        /> 
+
+        <
+        Route path = "singin"
+        element = { < SingIN / > }
+        />  <
+        Route path = "auth"
+        element = { < Authentication / > }
+        /> 
+
+        <
+        /Route>
+
+
+
+
+        <
+        /Routes>
+
+    );
 };
 
 export default App;
